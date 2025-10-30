@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: 10px 20px;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+header a:hover {
+    background-color: #b41212;
+    border-radius: 4px;
+}
+
+/* Іконка комп'ютера */
+header i {
+    color: #ffffff;
+    font-size: 28px;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+header i:hover {
+    color: #b41212;
+}
+
+h1 {
+    margin: 0;
+    color: #b41212;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    background-color: #bcbcbc;
+    min-height: 90.7vh;
+    border-top: 1px solid #666;
+}
+
+.left-panel {
+    width: 20%;
+    background-color: #bcbcbc;
+    padding: 15px;
+    border-right: 2px solid #9c9c9c;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.left-panel h3 {
+    margin-top: 0;
+    font-size: 15px;
+}
+
+.left-panel input[type="text"] {
+    width: 90%;
+    height: 20px;
+    margin-top: 5px;
+    border: 1px solid #666;
+    background-color: #e7e7e7;
+}
+
+input[type="checkbox"] + br + br + label {
+    color: #b41212;
+}
+
+.card:first-child ~ .card {
+    background-color: #e1e1e1;
+}
+
+.content {
+    width: 64%;
+    background-color: #c4c4c4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.card {
+    background-color: #d9d9d9;
+    border: 1px solid #a1a1a1;
+    border-radius: 8px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: 0.3s;
+    font-size: 14px;
+    position: relative;
+}
+
+.card a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.card a:hover {
+    background-color: #b41212;
+    color: #ffffff;
+}
+
+.card:first-child {
+    font-weight: bold;
+}
+
+.right-panel {
+    width: 20%;
+    background-color: #bcbcbc;
+    padding: 15px;
+    border-left: 2px solid #9c9c9c;
+    box-sizing: border-box;
+}
+
+.sticky-note {
+    position: sticky;
+    top: 60px;
+    background: #b41212;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #b41212;
+}
+
+.scroll-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #b41212;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #9c9c9c;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    .card {
+        width: 45%;
+        margin: 5px 0;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .scroll-up {
+        bottom: 10px;
+        right: 10px;
+    }
+}
